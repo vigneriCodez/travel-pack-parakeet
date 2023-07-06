@@ -13,7 +13,6 @@ function Form({ onAddItem }) {
 			packed: false,
 			id: Date.now(),
 		};
-		// handleAddItems(newItem);
 		onAddItem(newItem);
 		setDescription('');
 		setQuantity(1);
