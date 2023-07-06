@@ -7,7 +7,7 @@ function Item({ description, packed, quantity }) {
 			<span style={packed ? { textDecoration: 'line-through' } : {}}>
 				{quantity} {description}
 			</span>
-			<button>X</button>
+			<button style={{ color: 'red' }}>X</button>
 		</li>
 	);
 }
