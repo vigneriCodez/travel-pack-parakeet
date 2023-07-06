@@ -22,7 +22,7 @@ function App() {
 	return (
 		<div className='app'>
 			<Logo />
-			<Form onAdditem={handleAddItems} />
+			<Form onAddItem={handleAddItems} />
 			<PackingList items={items} />
 			<Stats />
 		</div>
