@@ -32,7 +32,12 @@ function App() {
 	};
 
 	const handleClearList = () => {
-		setItems([]);
+		const confirmed = window.confirm(
+			'Are you sure you want to delete this list?'
+		);
+		if (confirmed) {
+			setItems([]);
+		}
 	};
 
 	useEffect(() => {
