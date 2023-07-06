@@ -31,6 +31,10 @@ function App() {
 		);
 	};
 
+	const handleClearList = () => {
+		setItems([]);
+	};
+
 	useEffect(() => {
 		setItems([...initialItems]);
 	}, []);
@@ -43,6 +47,7 @@ function App() {
 				items={items}
 				onDeleteItem={handleDeleteItem}
 				onToggleItem={handleToggleItem}
+				onClearList={handleClearList}
 			/>
 			<Stats items={items} />
 		</div>
