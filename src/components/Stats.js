@@ -10,14 +10,14 @@ function Stats({ items }) {
 
 	const itemsCount = items.length;
 	const itemsPacked = items.filter((item) => item.packed).length;
-	const packedPecentage = Math.round((itemsPacked / itemsCount) * 100);
+	const packedPercentage = Math.round((itemsPacked / itemsCount) * 100);
 
 	return (
 		<footer className='stats'>
 			<em>
-				{packedPecentage === 100
+				{packedPercentage === 100
 					? 'You got everything ready to go!!! ✈️'
-					: `👜 You have ${itemsCount} items on your list and you already packed ${itemsPacked} (${packedPecentage}%)`}
+					: `👜 You have ${itemsCount} items on your list and you already packed ${itemsPacked} (${packedPercentage}%)`}
 			</em>
 		</footer>
 	);
