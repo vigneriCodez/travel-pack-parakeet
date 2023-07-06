@@ -1,13 +1,18 @@
 import React from 'react';
 
-function Item({ description, packed, quantity }) {
+function Item({ item, onDeleteItemDrill }) {
 	return (
 		<li>
 			<button>O</button>
-			<span style={packed ? { textDecoration: 'line-through' } : {}}>
-				{quantity} {description}
+			<span style={item.packed ? { textDecoration: 'line-through' } : {}}>
+				{item.quantity} {item.description}
 			</span>
-			<button style={{ color: 'red' }}>X</button>
+			<button
+				style={{ color: 'red' }}
+				onClick={() => onDeleteItemDrill(item.id)}
+			>
+				X
+			</button>
 		</li>
 	);
 }
