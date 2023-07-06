@@ -22,4 +22,5 @@ function Stats({ items }) {
 		</footer>
 	);
 }
+
 export default Stats;

@@ -15,4 +15,5 @@ function Item({ item, onDeleteItem, onToggleItem }) {
 		</li>
 	);
 }
+
 export default Item;

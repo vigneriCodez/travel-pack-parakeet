@@ -8,12 +8,10 @@ function PackingList({ items, onDeleteItem, onToggleItem, onClearList }) {
 	let sortedItems;
 
 	if (sortBy === 'input') sortedItems = items;
-
 	if (sortBy === 'description')
 		sortedItems = items
 			.slice()
 			.sort((a, b) => a.description.localeCompare(b.description));
-
 	if (sortBy === 'packed')
 		sortedItems = items
 			.slice()
@@ -44,4 +42,5 @@ function PackingList({ items, onDeleteItem, onToggleItem, onClearList }) {
 		</div>
 	);
 }
+
 export default PackingList;
