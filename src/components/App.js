@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Form from './Form';
 import Logo from './Logo';
@@ -13,17 +13,25 @@ const initialItems = [
 ];
 
 function App() {
-	const [items, setItems] = useState([...initialItems]);
+	const [items, setItems] = useState([]);
 
 	const handleAddItems = (item) => {
 		setItems((items) => [...items, item]);
 	};
 
+	const handleDeleteItem = (id) => {
+		setItems((items) => items.filter((item) => item.id !== id));
+	};
+
+	useEffect(() => {
+		setItems([...initialItems]);
+	}, []);
+
 	return (
 		<div className='app'>
 			<Logo />
 			<Form onAddItem={handleAddItems} />
-			<PackingList items={items} />
+			<PackingList items={items} onDeleteItem={handleDeleteItem} />
 			<Stats />
 		</div>
 	);
